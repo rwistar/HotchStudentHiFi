@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F35177F2482CC7600C366AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35177E2482CC7600C366AB /* AppDelegate.swift */; };
+		8F3517812482CC7600C366AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517802482CC7600C366AB /* SceneDelegate.swift */; };
+		8F3517882482CC7600C366AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3517862482CC7600C366AB /* Main.storyboard */; };
+		8F35178A2482CC7A00C366AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3517892482CC7A00C366AB /* Assets.xcassets */; };
+		8F35178D2482CC7A00C366AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F35178B2482CC7A00C366AB /* LaunchScreen.storyboard */; };
+		8F3517982482CC7B00C366AB /* HotchStudentHiFiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517972482CC7B00C366AB /* HotchStudentHiFiTests.swift */; };
+		8F3517A32482CC7B00C366AB /* HotchStudentHiFiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517A22482CC7B00C366AB /* HotchStudentHiFiUITests.swift */; };
+		8F3517B12482CDA100C366AB /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B02482CDA100C366AB /* EventsViewController.swift */; };
+		8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B22482CDE400C366AB /* MenuViewController.swift */; };
+		8F3517B52482CEDA00C366AB /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B42482CEDA00C366AB /* CoursesViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F3517942482CC7B00C366AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F3517732482CC7600C366AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F35177A2482CC7600C366AB;
+			remoteInfo = HotchStudentHiFi;
+		};
+		8F35179F2482CC7B00C366AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F3517732482CC7600C366AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F35177A2482CC7600C366AB;
+			remoteInfo = HotchStudentHiFi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F35177B2482CC7600C366AB /* HotchStudentHiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotchStudentHiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F35177E2482CC7600C366AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F3517802482CC7600C366AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8F3517872482CC7600C366AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F3517892482CC7A00C366AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F35178C2482CC7A00C366AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F35178E2482CC7A00C366AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F3517932482CC7B00C366AB /* HotchStudentHiFiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotchStudentHiFiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3517972482CC7B00C366AB /* HotchStudentHiFiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotchStudentHiFiTests.swift; sourceTree = "<group>"; };
+		8F3517992482CC7B00C366AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F35179E2482CC7B00C366AB /* HotchStudentHiFiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotchStudentHiFiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3517A22482CC7B00C366AB /* HotchStudentHiFiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotchStudentHiFiUITests.swift; sourceTree = "<group>"; };
+		8F3517A42482CC7B00C366AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F3517B02482CDA100C366AB /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		8F3517B22482CDE400C366AB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8F3517B42482CEDA00C366AB /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F3517782482CC7600C366AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3517902482CC7B00C366AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F35179B2482CC7B00C366AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F3517722482CC7600C366AB = {
+			isa = PBXGroup;
+			children = (
+				8F35177D2482CC7600C366AB /* HotchStudentHiFi */,
+				8F3517962482CC7B00C366AB /* HotchStudentHiFiTests */,
+				8F3517A12482CC7B00C366AB /* HotchStudentHiFiUITests */,
+				8F35177C2482CC7600C366AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F35177C2482CC7600C366AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F35177B2482CC7600C366AB /* HotchStudentHiFi.app */,
+				8F3517932482CC7B00C366AB /* HotchStudentHiFiTests.xctest */,
+				8F35179E2482CC7B00C366AB /* HotchStudentHiFiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F35177D2482CC7600C366AB /* HotchStudentHiFi */ = {
+			isa = PBXGroup;
+			children = (
+				8F35177E2482CC7600C366AB /* AppDelegate.swift */,
+				8F3517802482CC7600C366AB /* SceneDelegate.swift */,
+				8F3517862482CC7600C366AB /* Main.storyboard */,
+				8F3517892482CC7A00C366AB /* Assets.xcassets */,
+				8F35178B2482CC7A00C366AB /* LaunchScreen.storyboard */,
+				8F35178E2482CC7A00C366AB /* Info.plist */,
+				8F3517B02482CDA100C366AB /* EventsViewController.swift */,
+				8F3517B22482CDE400C366AB /* MenuViewController.swift */,
+				8F3517B42482CEDA00C366AB /* CoursesViewController.swift */,
+			);
+			path = HotchStudentHiFi;
+			sourceTree = "<group>";
+		};
+		8F3517962482CC7B00C366AB /* HotchStudentHiFiTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F3517972482CC7B00C366AB /* HotchStudentHiFiTests.swift */,
+				8F3517992482CC7B00C366AB /* Info.plist */,
+			);
+			path = HotchStudentHiFiTests;
+			sourceTree = "<group>";
+		};
+		8F3517A12482CC7B00C366AB /* HotchStudentHiFiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F3517A22482CC7B00C366AB /* HotchStudentHiFiUITests.swift */,
+				8F3517A42482CC7B00C366AB /* Info.plist */,
+			);
+			path = HotchStudentHiFiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F35177A2482CC7600C366AB /* HotchStudentHiFi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F3517A72482CC7B00C366AB /* Build configuration list for PBXNativeTarget "HotchStudentHiFi" */;
+			buildPhases = (
+				8F3517772482CC7600C366AB /* Sources */,
+				8F3517782482CC7600C366AB /* Frameworks */,
+				8F3517792482CC7600C366AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HotchStudentHiFi;
+			productName = HotchStudentHiFi;
+			productReference = 8F35177B2482CC7600C366AB /* HotchStudentHiFi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F3517922482CC7B00C366AB /* HotchStudentHiFiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F3517AA2482CC7B00C366AB /* Build configuration list for PBXNativeTarget "HotchStudentHiFiTests" */;
+			buildPhases = (
+				8F35178F2482CC7B00C366AB /* Sources */,
+				8F3517902482CC7B00C366AB /* Frameworks */,
+				8F3517912482CC7B00C366AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F3517952482CC7B00C366AB /* PBXTargetDependency */,
+			);
+			name = HotchStudentHiFiTests;
+			productName = HotchStudentHiFiTests;
+			productReference = 8F3517932482CC7B00C366AB /* HotchStudentHiFiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F35179D2482CC7B00C366AB /* HotchStudentHiFiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F3517AD2482CC7B00C366AB /* Build configuration list for PBXNativeTarget "HotchStudentHiFiUITests" */;
+			buildPhases = (
+				8F35179A2482CC7B00C366AB /* Sources */,
+				8F35179B2482CC7B00C366AB /* Frameworks */,
+				8F35179C2482CC7B00C366AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F3517A02482CC7B00C366AB /* PBXTargetDependency */,
+			);
+			name = HotchStudentHiFiUITests;
+			productName = HotchStudentHiFiUITests;
+			productReference = 8F35179E2482CC7B00C366AB /* HotchStudentHiFiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F3517732482CC7600C366AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Roger P Wistar";
+				TargetAttributes = {
+					8F35177A2482CC7600C366AB = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					8F3517922482CC7B00C366AB = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 8F35177A2482CC7600C366AB;
+					};
+					8F35179D2482CC7B00C366AB = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 8F35177A2482CC7600C366AB;
+					};
+				};
+			};
+			buildConfigurationList = 8F3517762482CC7600C366AB /* Build configuration list for PBXProject "HotchStudentHiFi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F3517722482CC7600C366AB;
+			productRefGroup = 8F35177C2482CC7600C366AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F35177A2482CC7600C366AB /* HotchStudentHiFi */,
+				8F3517922482CC7B00C366AB /* HotchStudentHiFiTests */,
+				8F35179D2482CC7B00C366AB /* HotchStudentHiFiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F3517792482CC7600C366AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F35178D2482CC7A00C366AB /* LaunchScreen.storyboard in Resources */,
+				8F35178A2482CC7A00C366AB /* Assets.xcassets in Resources */,
+				8F3517882482CC7600C366AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F3517912482CC7B00C366AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F35179C2482CC7B00C366AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F3517772482CC7600C366AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F35177F2482CC7600C366AB /* AppDelegate.swift in Sources */,
+				8F3517812482CC7600C366AB /* SceneDelegate.swift in Sources */,
+				8F3517B12482CDA100C366AB /* EventsViewController.swift in Sources */,
+				8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */,
+				8F3517B52482CEDA00C366AB /* CoursesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F35178F2482CC7B00C366AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F3517982482CC7B00C366AB /* HotchStudentHiFiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F35179A2482CC7B00C366AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F3517A32482CC7B00C366AB /* HotchStudentHiFiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F3517952482CC7B00C366AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F35177A2482CC7600C366AB /* HotchStudentHiFi */;
+			targetProxy = 8F3517942482CC7B00C366AB /* PBXContainerItemProxy */;
+		};
+		8F3517A02482CC7B00C366AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F35177A2482CC7600C366AB /* HotchStudentHiFi */;
+			targetProxy = 8F35179F2482CC7B00C366AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F3517862482CC7600C366AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F3517872482CC7600C366AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F35178B2482CC7A00C366AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F35178C2482CC7A00C366AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F3517A52482CC7B00C366AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F3517A62482CC7B00C366AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F3517A82482CC7B00C366AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HotchStudentHiFi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hotchkiss.HotchStudentHiFi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F3517A92482CC7B00C366AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HotchStudentHiFi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hotchkiss.HotchStudentHiFi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F3517AB2482CC7B00C366AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HotchStudentHiFiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hotchkiss.HotchStudentHiFiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotchStudentHiFi.app/HotchStudentHiFi";
+			};
+			name = Debug;
+		};
+		8F3517AC2482CC7B00C366AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HotchStudentHiFiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hotchkiss.HotchStudentHiFiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotchStudentHiFi.app/HotchStudentHiFi";
+			};
+			name = Release;
+		};
+		8F3517AE2482CC7B00C366AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HotchStudentHiFiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hotchkiss.HotchStudentHiFiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HotchStudentHiFi;
+			};
+			name = Debug;
+		};
+		8F3517AF2482CC7B00C366AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HotchStudentHiFiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hotchkiss.HotchStudentHiFiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HotchStudentHiFi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F3517762482CC7600C366AB /* Build configuration list for PBXProject "HotchStudentHiFi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F3517A52482CC7B00C366AB /* Debug */,
+				8F3517A62482CC7B00C366AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F3517A72482CC7B00C366AB /* Build configuration list for PBXNativeTarget "HotchStudentHiFi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F3517A82482CC7B00C366AB /* Debug */,
+				8F3517A92482CC7B00C366AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F3517AA2482CC7B00C366AB /* Build configuration list for PBXNativeTarget "HotchStudentHiFiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F3517AB2482CC7B00C366AB /* Debug */,
+				8F3517AC2482CC7B00C366AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F3517AD2482CC7B00C366AB /* Build configuration list for PBXNativeTarget "HotchStudentHiFiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F3517AE2482CC7B00C366AB /* Debug */,
+				8F3517AF2482CC7B00C366AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F3517732482CC7600C366AB /* Project object */;
+}
