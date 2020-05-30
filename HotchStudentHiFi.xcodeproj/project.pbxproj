@@ -17,6 +17,7 @@
 		8F3517B12482CDA100C366AB /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B02482CDA100C366AB /* EventsViewController.swift */; };
 		8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B22482CDE400C366AB /* MenuViewController.swift */; };
 		8F3517B52482CEDA00C366AB /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B42482CEDA00C366AB /* CoursesViewController.swift */; };
+		8F3517B72482D23F00C366AB /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B62482D23F00C366AB /* SocialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8F3517B02482CDA100C366AB /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		8F3517B22482CDE400C366AB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8F3517B42482CEDA00C366AB /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		8F3517B62482D23F00C366AB /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				8F35177E2482CC7600C366AB /* AppDelegate.swift */,
 				8F3517802482CC7600C366AB /* SceneDelegate.swift */,
 				8F3517862482CC7600C366AB /* Main.storyboard */,
+				8F3517B62482D23F00C366AB /* SocialViewController.swift */,
 				8F3517892482CC7A00C366AB /* Assets.xcassets */,
 				8F35178B2482CC7A00C366AB /* LaunchScreen.storyboard */,
 				8F35178E2482CC7A00C366AB /* Info.plist */,
@@ -268,6 +271,7 @@
 				8F35177F2482CC7600C366AB /* AppDelegate.swift in Sources */,
 				8F3517812482CC7600C366AB /* SceneDelegate.swift in Sources */,
 				8F3517B12482CDA100C366AB /* EventsViewController.swift in Sources */,
+				8F3517B72482D23F00C366AB /* SocialViewController.swift in Sources */,
 				8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */,
 				8F3517B52482CEDA00C366AB /* CoursesViewController.swift in Sources */,
 			);
