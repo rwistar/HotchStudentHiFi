@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8F35135C2485931B004636E9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F35135B2485931B004636E9 /* WebKit.framework */; };
+		8F35135E24859894004636E9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35135D24859894004636E9 /* Event.swift */; };
+		8F35136024859DB5004636E9 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35135F24859DB5004636E9 /* EventsTableViewController.swift */; };
 		8F35177F2482CC7600C366AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35177E2482CC7600C366AB /* AppDelegate.swift */; };
 		8F3517812482CC7600C366AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517802482CC7600C366AB /* SceneDelegate.swift */; };
 		8F3517882482CC7600C366AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3517862482CC7600C366AB /* Main.storyboard */; };
@@ -15,7 +17,6 @@
 		8F35178D2482CC7A00C366AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F35178B2482CC7A00C366AB /* LaunchScreen.storyboard */; };
 		8F3517982482CC7B00C366AB /* HotchStudentHiFiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517972482CC7B00C366AB /* HotchStudentHiFiTests.swift */; };
 		8F3517A32482CC7B00C366AB /* HotchStudentHiFiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517A22482CC7B00C366AB /* HotchStudentHiFiUITests.swift */; };
-		8F3517B12482CDA100C366AB /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B02482CDA100C366AB /* EventsViewController.swift */; };
 		8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B22482CDE400C366AB /* MenuViewController.swift */; };
 		8F3517B52482CEDA00C366AB /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B42482CEDA00C366AB /* CoursesViewController.swift */; };
 		8F3517B72482D23F00C366AB /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B62482D23F00C366AB /* SocialViewController.swift */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		8F35135B2485931B004636E9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8F35135D24859894004636E9 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		8F35135F24859DB5004636E9 /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		8F35177B2482CC7600C366AB /* HotchStudentHiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotchStudentHiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F35177E2482CC7600C366AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F3517802482CC7600C366AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +56,6 @@
 		8F35179E2482CC7B00C366AB /* HotchStudentHiFiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotchStudentHiFiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3517A22482CC7B00C366AB /* HotchStudentHiFiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotchStudentHiFiUITests.swift; sourceTree = "<group>"; };
 		8F3517A42482CC7B00C366AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F3517B02482CDA100C366AB /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		8F3517B22482CDE400C366AB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8F3517B42482CEDA00C366AB /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		8F3517B62482D23F00C366AB /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
@@ -124,9 +126,10 @@
 				8F3517892482CC7A00C366AB /* Assets.xcassets */,
 				8F35178B2482CC7A00C366AB /* LaunchScreen.storyboard */,
 				8F35178E2482CC7A00C366AB /* Info.plist */,
-				8F3517B02482CDA100C366AB /* EventsViewController.swift */,
 				8F3517B22482CDE400C366AB /* MenuViewController.swift */,
 				8F3517B42482CEDA00C366AB /* CoursesViewController.swift */,
+				8F35135D24859894004636E9 /* Event.swift */,
+				8F35135F24859DB5004636E9 /* EventsTableViewController.swift */,
 			);
 			path = HotchStudentHiFi;
 			sourceTree = "<group>";
@@ -281,10 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F35177F2482CC7600C366AB /* AppDelegate.swift in Sources */,
+				8F35136024859DB5004636E9 /* EventsTableViewController.swift in Sources */,
 				8F3517812482CC7600C366AB /* SceneDelegate.swift in Sources */,
-				8F3517B12482CDA100C366AB /* EventsViewController.swift in Sources */,
 				8F3517B72482D23F00C366AB /* SocialViewController.swift in Sources */,
 				8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */,
+				8F35135E24859894004636E9 /* Event.swift in Sources */,
 				8F3517B52482CEDA00C366AB /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
