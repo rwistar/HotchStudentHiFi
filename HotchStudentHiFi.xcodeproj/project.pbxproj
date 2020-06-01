@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F35135C2485931B004636E9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F35135B2485931B004636E9 /* WebKit.framework */; };
 		8F35177F2482CC7600C366AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F35177E2482CC7600C366AB /* AppDelegate.swift */; };
 		8F3517812482CC7600C366AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517802482CC7600C366AB /* SceneDelegate.swift */; };
 		8F3517882482CC7600C366AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3517862482CC7600C366AB /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F35135B2485931B004636E9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8F35177B2482CC7600C366AB /* HotchStudentHiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotchStudentHiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F35177E2482CC7600C366AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F3517802482CC7600C366AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F35135C2485931B004636E9 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F35135A2485931B004636E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F35135B2485931B004636E9 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F3517722482CC7600C366AB = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,7 @@
 				8F3517962482CC7B00C366AB /* HotchStudentHiFiTests */,
 				8F3517A12482CC7B00C366AB /* HotchStudentHiFiUITests */,
 				8F35177C2482CC7600C366AB /* Products */,
+				8F35135A2485931B004636E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

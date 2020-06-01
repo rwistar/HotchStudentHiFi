@@ -36,7 +36,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Events" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="calendar" catalog="system" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,32 +50,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Menu View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="121.5" y="426.5" width="171.5" height="43"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by MenuViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="106" y="477.5" width="202" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnA-p1-gPz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="NnA-p1-gPz" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="D98-Xa-jl9"/>
+                            <constraint firstItem="NnA-p1-gPz" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="d6T-Bc-18d"/>
+                            <constraint firstItem="NnA-p1-gPz" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="qGG-u9-QPB"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="NnA-p1-gPz" secondAttribute="trailing" id="rXd-oz-tlu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="cart" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="myWebView" destination="NnA-p1-gPz" id="Pbv-RE-tDY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -126,7 +127,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oRz-rK-uXD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Courses" image="second" id="U5Y-Js-PEE"/>
+                    <tabBarItem key="tabBarItem" title="Courses" image="book" catalog="system" id="U5Y-Js-PEE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55S-Mj-ZEW" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,7 +162,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AJi-dG-KUu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Social" image="second" id="ZN2-o5-LQn"/>
+                    <tabBarItem key="tabBarItem" title="Social" image="hand.thumbsup" catalog="system" id="ZN2-o5-LQn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtB-Sy-T6L" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,7 +170,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
     </resources>
 </document>

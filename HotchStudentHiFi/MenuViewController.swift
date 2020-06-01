@@ -7,13 +7,31 @@
 //
 
 import UIKit
+import WebKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var myWebView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        myWebView.navigationDelegate = self
+        
+        if let address = URL(string: "https://www.hotchkiss.org/todays-menu") {
+            let request = URLRequest(url: address)
+            myWebView.load(request)
+        } else {
+            print("Can't load menu!")
+        }
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webView.evaluateJavaScript("document.documentElement.style.webkitUserSelect='none'")
+        webView.evaluateJavaScript("document.documentElement.style.webkitTouchCallout='none'")
+        webView.evaluateJavaScript("var elems = document.getElementsByTagName('a'); for (var i = 0; i < elems.length; i++) { elems[i]['href'] = 'javascript:(void)'; }")
     }
     
 
