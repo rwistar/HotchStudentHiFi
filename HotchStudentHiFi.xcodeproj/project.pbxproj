@@ -20,6 +20,7 @@
 		8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B22482CDE400C366AB /* MenuViewController.swift */; };
 		8F3517B52482CEDA00C366AB /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B42482CEDA00C366AB /* CoursesViewController.swift */; };
 		8F3517B72482D23F00C366AB /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B62482D23F00C366AB /* SocialViewController.swift */; };
+		8F8FE28E24867E7C00DA3A71 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8FE28D24867E7C00DA3A71 /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		8F3517B22482CDE400C366AB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8F3517B42482CEDA00C366AB /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		8F3517B62482D23F00C366AB /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		8F8FE28D24867E7C00DA3A71 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				8F3517B42482CEDA00C366AB /* CoursesViewController.swift */,
 				8F35135D24859894004636E9 /* Event.swift */,
 				8F35135F24859DB5004636E9 /* EventsTableViewController.swift */,
+				8F8FE28D24867E7C00DA3A71 /* EventDetailViewController.swift */,
 			);
 			path = HotchStudentHiFi;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				8F3517812482CC7600C366AB /* SceneDelegate.swift in Sources */,
 				8F3517B72482D23F00C366AB /* SocialViewController.swift in Sources */,
 				8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */,
+				8F8FE28E24867E7C00DA3A71 /* EventDetailViewController.swift in Sources */,
 				8F35135E24859894004636E9 /* Event.swift in Sources */,
 				8F3517B52482CEDA00C366AB /* CoursesViewController.swift in Sources */,
 			);

@@ -13,4 +13,10 @@ struct Event {
     var desc: String
     var date: Date
     var loc: String
+    
+    var formattedDate : String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, hh:mm a"
+        return dateFormatter.string(from: date)
+    }
 }
