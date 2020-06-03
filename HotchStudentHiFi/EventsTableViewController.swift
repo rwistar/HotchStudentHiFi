@@ -26,8 +26,18 @@ class EventsTableViewController: UITableViewController {
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        let someDateTime = formatter.date(from: "2016/10/08 22:31")
-        events.append(Event(title: "Graduation", desc: "Get your diploma", date: someDateTime!, loc: "Zoom"))
+        
+        let date1 = formatter.date(from: "1891/09/01 08:30")
+        events.append(Event(title: "Found the Hotchkiss School", desc: "Let's put that money to good use! Bring in those students", date: date1!, loc: "Lakeville, CT"))
+        
+        let date2 = formatter.date(from: "2004/08/14 16:00")
+        events.append(Event(title: "Pierce-Wistar Wedding", desc: "A very happy day for all", date: date2!, loc: "Chapel"))
+        
+        let date3 = formatter.date(from: "2020/05/29 20:00")
+        events.append(Event(title: "Graduation", desc: "Get those diplomas!", date: date3!, loc: "Zoom"))
+        
+
+        
     }
 
     // MARK: - Table view data source
