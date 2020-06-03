@@ -11,18 +11,18 @@ import WebKit
 
 class MenuViewController: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet weak var myWebView: WKWebView!
+    @IBOutlet weak var menuWebView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        myWebView.navigationDelegate = self
+        menuWebView.navigationDelegate = self
         
         if let address = URL(string: "https://www.hotchkiss.org/todays-menu") {
             let request = URLRequest(url: address)
-            myWebView.load(request)
+            menuWebView.load(request)
         } else {
             print("Can't load menu!")
         }

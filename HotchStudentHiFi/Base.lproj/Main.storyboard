@@ -36,7 +36,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" image="cart" catalog="system" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="myWebView" destination="NnA-p1-gPz" id="Pbv-RE-tDY"/>
+                        <outlet property="menuWebView" destination="NnA-p1-gPz" id="V69-tu-HEV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQ5-Zr-md4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-874" y="-1"/>
+            <point key="canvasLocation" x="-1129" y="704"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -82,12 +82,12 @@
                         <segue destination="42l-HL-rDa" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="w6c-Cd-rEm" kind="relationship" relationship="viewControllers" id="j0K-Wf-zmO"/>
-                        <segue destination="PY1-gk-uwP" kind="relationship" relationship="viewControllers" id="yeZ-PV-NW5"/>
+                        <segue destination="0Eh-NB-0NA" kind="relationship" relationship="viewControllers" id="yeZ-PV-NW5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-254" y="706"/>
         </scene>
         <!--Courses-->
         <scene sceneID="fUj-6f-pPV">
@@ -97,24 +97,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Courses View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SVG-Bc-FL6">
-                                <rect key="frame" x="101" y="399.5" width="212.5" height="43"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by CoursesViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6XE-d0-YZY">
-                                <rect key="frame" x="97.5" y="450.5" width="219" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-YV-U4E">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6XE-d0-YZY" firstAttribute="top" secondItem="SVG-Bc-FL6" secondAttribute="bottom" constant="8" symbolic="YES" id="6g0-eu-XBg"/>
-                            <constraint firstItem="6XE-d0-YZY" firstAttribute="centerX" secondItem="SVG-Bc-FL6" secondAttribute="centerX" id="dAD-7z-Tdw"/>
-                            <constraint firstAttribute="centerY" secondItem="SVG-Bc-FL6" secondAttribute="centerY" id="tYn-tD-Zaq"/>
-                            <constraint firstAttribute="centerX" secondItem="SVG-Bc-FL6" secondAttribute="centerX" id="wk4-Ua-qwv"/>
+                            <constraint firstItem="tdl-YV-U4E" firstAttribute="bottom" secondItem="oRz-rK-uXD" secondAttribute="bottom" id="00Q-v7-F1q"/>
+                            <constraint firstItem="tdl-YV-U4E" firstAttribute="top" secondItem="oRz-rK-uXD" secondAttribute="top" id="O3L-xc-fUI"/>
+                            <constraint firstItem="tdl-YV-U4E" firstAttribute="trailing" secondItem="oRz-rK-uXD" secondAttribute="trailing" id="SAF-oI-ZLI"/>
+                            <constraint firstItem="tdl-YV-U4E" firstAttribute="leading" secondItem="oRz-rK-uXD" secondAttribute="leading" id="fZT-t0-jia"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oRz-rK-uXD"/>
                     </view>
@@ -122,42 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55S-Mj-ZEW" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="1084"/>
-        </scene>
-        <!--Social-->
-        <scene sceneID="d13-Yu-9vK">
-            <objects>
-                <viewController id="PY1-gk-uwP" customClass="SecondViewController" customModule="HotchStudentHiFi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9Cs-oy-gc0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Social View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gyV-V6-Bi9">
-                                <rect key="frame" x="118.5" y="399.5" width="177.5" height="43"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SocialViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4N-M3-Bz4">
-                                <rect key="frame" x="104.5" y="450.5" width="205" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="gyV-V6-Bi9" secondAttribute="centerY" id="Mpd-7k-coU"/>
-                            <constraint firstItem="J4N-M3-Bz4" firstAttribute="centerX" secondItem="gyV-V6-Bi9" secondAttribute="centerX" id="VcR-4Q-kXv"/>
-                            <constraint firstItem="J4N-M3-Bz4" firstAttribute="top" secondItem="gyV-V6-Bi9" secondAttribute="bottom" constant="8" symbolic="YES" id="f1r-SL-dCc"/>
-                            <constraint firstAttribute="centerX" secondItem="gyV-V6-Bi9" secondAttribute="centerX" id="zCG-rQ-6D1"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="AJi-dG-KUu"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Social" image="hand.thumbsup" catalog="system" id="ZN2-o5-LQn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FtB-Sy-T6L" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="749" y="1819"/>
+            <point key="canvasLocation" x="747.82608695652175" y="1083.4821428571429"/>
         </scene>
         <!--Events-->
         <scene sceneID="luI-Uh-JdD">
@@ -339,9 +296,101 @@
             </objects>
             <point key="canvasLocation" x="2430" y="-320"/>
         </scene>
+        <!--Social-->
+        <scene sceneID="fQs-8r-5z6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Eh-NB-0NA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Social" image="hand.thumbsup" catalog="system" id="ZN2-o5-LQn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nrf-3i-Vmn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wa1-Oe-uFX" kind="relationship" relationship="rootViewController" id="BOr-c2-RjD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bYj-Jr-TpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="1818.75"/>
+        </scene>
+        <!--Social Media-->
+        <scene sceneID="LkH-ia-Iav">
+            <objects>
+                <tableViewController id="wa1-Oe-uFX" customClass="SocialTableViewController" customModule="HotchStudentHiFi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wZA-Y5-ILM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="socialCell" textLabel="jCS-SL-60V" style="IBUITableViewCellStyleDefault" id="BIb-Nr-Gva">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BIb-Nr-Gva" id="EpX-g2-dsa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCS-SL-60V">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wa1-Oe-uFX" id="7Ci-LR-gPx"/>
+                            <outlet property="delegate" destination="wa1-Oe-uFX" id="Ess-x2-7FV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Social Media" id="hfo-3P-RnN"/>
+                    <connections>
+                        <segue destination="ek8-mz-hvN" kind="show" identifier="segueSocial" id="vKH-ZG-UvZ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHy-94-ozv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="1819"/>
+        </scene>
+        <!--Social View Controller-->
+        <scene sceneID="912-uT-av6">
+            <objects>
+                <viewController id="ek8-mz-hvN" customClass="SocialViewController" customModule="HotchStudentHiFi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D7Z-1M-m3S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MGo-MP-esN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="HVH-W2-bzY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ewy-0j-ABQ"/>
+                    <connections>
+                        <outlet property="socialWebView" destination="MGo-MP-esN" id="Hjr-8Y-N3J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goZ-9j-9KS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535" y="1819"/>
+        </scene>
     </scenes>
     <resources>
         <image name="GoogleSignIn" width="600" height="188"/>
+        <image name="Schedule" width="612" height="792"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="cart" catalog="system" width="128" height="102"/>

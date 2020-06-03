@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import WebKit
 
-class SocialViewController: UIViewController {
+class SocialViewController: UIViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var socialWebView: WKWebView!
+    
+    var socialURL: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if let url = socialURL, let address = URL(string: url) {
+            let request = URLRequest(url: address)
+            socialWebView.load(request)
+        } else {
+            print("Can't load feed!")
+        }
     }
     
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webView.evaluateJavaScript("document.documentElement.style.webkitUserSelect='none'")
+        webView.evaluateJavaScript("document.documentElement.style.webkitTouchCallout='none'")
+        webView.evaluateJavaScript("var elems = document.getElementsByTagName('a'); for (var i = 0; i < elems.length; i++) { elems[i]['href'] = 'javascript:(void)'; }")
+    }
 
     /*
     // MARK: - Navigation
