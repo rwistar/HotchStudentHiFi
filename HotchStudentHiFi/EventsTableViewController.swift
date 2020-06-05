@@ -10,10 +10,14 @@ import UIKit
 
 var events = [Event]()
 
+var filters = [String: Bool]()
+
 
 class EventsTableViewController: UITableViewController {
 
-    var selectedIdx : Int = -1
+    var selectedEvent : Event?
+    
+    var filteredEvents = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +31,35 @@ class EventsTableViewController: UITableViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
         
-        let date1 = formatter.date(from: "1891/09/01 08:30")
-        events.append(Event(title: "Found the Hotchkiss School", desc: "Let's put that money to good use! Bring in those students", date: date1!, loc: "Lakeville, CT"))
+        let date1 = formatter.date(from: "2020/04/02 12:15")
+        events.append(Event(title: "Chapel", desc: "", date: date1!, loc: "Zoom", org: "Student Activities", contact: "Jason Larson"))
+        filters["Student Activities"] = true
         
-        let date2 = formatter.date(from: "2004/08/14 16:00")
-        events.append(Event(title: "Pierce-Wistar Wedding", desc: "A very happy day for all", date: date2!, loc: "Chapel"))
+        let date2 = formatter.date(from: "2020/04/02 13:30")
+        events.append(Event(title: "BaHSA", desc: "We'll be discussing the effects of COVID-19 on food, education, healthcare systems and more for people of different demographics mainly within the United States.", date: date2!, loc: "Zoom", org: "BaHSA", contact: "BaHSA Board"))
+        filters["BaHSA"] = true
         
-        let date3 = formatter.date(from: "2020/05/29 20:00")
-        events.append(Event(title: "Graduation", desc: "Get those diplomas!", date: date3!, loc: "Zoom"))
+        let date3 = formatter.date(from: "2020/04/03 15:00")
+        events.append(Event(title: "Environmental impact of COVID-19", desc: "", date: date3!, loc: "Zoom", org: "SEA", contact: "SEA Board"))
+        filters["SEA"] = true
         
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        filterEvents()
+        tableView.reloadData()
+    }
+    
+    func filterEvents() {
+        filteredEvents = [Event]()
+        
+        for event in events {
+            if filters[event.org] == true {
+                filteredEvents.append(event)
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -49,16 +71,16 @@ class EventsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events.count
+        return filteredEvents.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellEvent", for: indexPath)
 
         // Configure the cell...
 
-        let event = events[indexPath.row]
+        let event = filteredEvents[indexPath.row]
         
         cell.textLabel?.text = event.title
         cell.detailTextLabel?.text = event.formattedDate
@@ -67,7 +89,7 @@ class EventsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIdx = indexPath.row
+        selectedEvent = filteredEvents[indexPath.row]
         performSegue(withIdentifier: "segueEventDetail", sender: self)
     }
     
@@ -116,7 +138,7 @@ class EventsTableViewController: UITableViewController {
         
         if segue.identifier == "segueEventDetail" {
             if let destination = segue.destination as? EventDetailViewController {
-                destination.eventIdx = selectedIdx
+                destination.event = selectedEvent
             }            
         }
     }

@@ -1,22 +1,16 @@
 //
-//  EventViewController.swift
+//  EventFilterTableViewController.swift
 //  HotchStudentHiFi
 //
-//  Created by Roger P Wistar on 6/2/20.
+//  Created by Roger P Wistar on 6/5/20.
 //  Copyright © 2020 Roger P Wistar. All rights reserved.
 //
 
 import UIKit
 
-class EventDetailViewController: UITableViewController {
+class EventFilterTableViewController: UITableViewController {
 
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblDate: UILabel!
-    @IBOutlet weak var lblLoc: UILabel!
-    @IBOutlet weak var lblHost: UILabel!
-    @IBOutlet weak var txtDesc: UITextView!
-    
-    var event: Event?
+    var keys = filters.keys.sorted()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,39 +21,49 @@ class EventDetailViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-//        eventIdx = 0
         
-        if let event = self.event {
-            lblTitle.text = event.title
-            lblDate.text = event.formattedDate
-            lblLoc.text = event.loc
-            lblHost.text = "\(event.org): \(event.contact)"
-            txtDesc.text = event.desc
-            
-        }
     }
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
 
-    /*
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return filters.keys.count
+    }
+
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellFilter", for: indexPath)
 
         // Configure the cell...
+        let key = keys[indexPath.row]
+        cell.textLabel?.text = key
+        if filters[key] == true {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath), let label = cell.textLabel, let filter = label.text {
+            if filters[filter] == true {
+                filters[filter] = false
+            } else {
+                filters[filter] = true
+            }
+            
+            tableView.reloadData()
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

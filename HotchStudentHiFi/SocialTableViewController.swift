@@ -44,7 +44,7 @@ class SocialTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "socialCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellSocial", for: indexPath)
 
         // Configure the cell...
         let idx = indexPath.row
