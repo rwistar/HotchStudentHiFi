@@ -18,7 +18,7 @@ struct Event {
     
     var formattedDate : String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM d, YYYY -- hh:mm a"
+        dateFormatter.dateFormat = "MMM d, YYYY -- h:mm a"
         return dateFormatter.string(from: date)
     }
 }

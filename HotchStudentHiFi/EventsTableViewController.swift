@@ -12,6 +12,11 @@ var events = [Event]()
 
 var filters = [String: Bool]()
 
+class EventsTableCell: UITableViewCell {
+    @IBOutlet weak var lblEventTitle: UILabel!
+    @IBOutlet weak var lblEventDate: UILabel!
+    @IBOutlet weak var lblEventDesc: UILabel!
+}
 
 class EventsTableViewController: UITableViewController {
 
@@ -34,14 +39,14 @@ class EventsTableViewController: UITableViewController {
         let date1 = formatter.date(from: "2020/04/02 12:15")
         events.append(Event(title: "Chapel", desc: "", date: date1!, loc: "Zoom", org: "Student Activities", contact: "Jason Larson"))
         filters["Student Activities"] = true
+
+        let date3 = formatter.date(from: "2020/04/03 15:00")
+        events.append(Event(title: "Environmental impact of COVID-19", desc: "", date: date3!, loc: "Zoom", org: "SEA", contact: "SEA Board"))
+        filters["SEA"] = true
         
         let date2 = formatter.date(from: "2020/04/02 13:30")
         events.append(Event(title: "BaHSA", desc: "We'll be discussing the effects of COVID-19 on food, education, healthcare systems and more for people of different demographics mainly within the United States.", date: date2!, loc: "Zoom", org: "BaHSA", contact: "BaHSA Board"))
         filters["BaHSA"] = true
-        
-        let date3 = formatter.date(from: "2020/04/03 15:00")
-        events.append(Event(title: "Environmental impact of COVID-19", desc: "", date: date3!, loc: "Zoom", org: "SEA", contact: "SEA Board"))
-        filters["SEA"] = true
         
     }
     
@@ -60,6 +65,10 @@ class EventsTableViewController: UITableViewController {
                 filteredEvents.append(event)
             }
         }
+        
+        filteredEvents.sort {
+            $0.date < $1.date
+        }
     }
 
     // MARK: - Table view data source
@@ -76,14 +85,15 @@ class EventsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellEvent", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellEvent", for: indexPath) as! EventsTableCell
 
         // Configure the cell...
 
         let event = filteredEvents[indexPath.row]
         
-        cell.textLabel?.text = event.title
-        cell.detailTextLabel?.text = event.formattedDate
+        cell.lblEventTitle.text = event.title
+        cell.lblEventDate.text = event.formattedDate
+        cell.lblEventDesc.text = event.desc
         
         return cell
     }
