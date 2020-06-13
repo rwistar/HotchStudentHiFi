@@ -508,7 +508,7 @@
         <!--L&F Items-->
         <scene sceneID="CIn-8j-adH">
             <objects>
-                <tableViewController title="L&amp;F Items" id="KNf-dL-rEu" sceneMemberID="viewController">
+                <tableViewController title="L&amp;F Items" id="KNf-dL-rEu" customClass="LFDetailViewController" customModule="HotchStudentHiFi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Ed-pj-Q1S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -612,6 +612,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="guF-MY-bFu"/>
+                    <connections>
+                        <outlet property="lblItemContact" destination="mgL-wg-k9L" id="hFt-vC-Geh"/>
+                        <outlet property="lblItemDate" destination="N9L-1Y-jUN" id="f1W-EM-BIn"/>
+                        <outlet property="lblItemName" destination="Nb2-wR-HKW" id="DGe-k3-ThL"/>
+                        <outlet property="txtItemDesc" destination="dkZ-YI-7ie" id="OoZ-sb-BEk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fS-HV-sgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -620,17 +626,17 @@
         <!--L&F Table-->
         <scene sceneID="Obo-o0-kal">
             <objects>
-                <tableViewController title="L&amp;F Table" id="Uf6-Ij-Qnz" sceneMemberID="viewController">
+                <tableViewController title="L&amp;F Table" id="Uf6-Ij-Qnz" customClass="LFTableViewController" customModule="HotchStudentHiFi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zLT-ay-IjG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellLF" rowHeight="113" id="Fes-CI-emW">
-                                <rect key="frame" x="0.0" y="28" width="414" height="113"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellLF" rowHeight="138" id="Fes-CI-emW" customClass="LFTableCell" customModule="HotchStudentHiFi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fes-CI-emW" id="Lim-Zg-M7K">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L&amp;F Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjF-Ps-uig">
@@ -652,10 +658,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L&amp;F Contact" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1O-mC-Jmp">
-                                            <rect key="frame" x="20" y="77" width="374" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="mPb-lb-hIV"/>
-                                            </constraints>
+                                            <rect key="frame" x="20" y="77" width="374" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -665,6 +668,7 @@
                                         <constraint firstItem="qvc-ix-u1y" firstAttribute="leading" secondItem="Lim-Zg-M7K" secondAttribute="leadingMargin" id="42h-P8-tAg"/>
                                         <constraint firstItem="xjF-Ps-uig" firstAttribute="top" secondItem="Lim-Zg-M7K" secondAttribute="topMargin" id="4ln-fL-6tE"/>
                                         <constraint firstItem="xjF-Ps-uig" firstAttribute="trailing" secondItem="Lim-Zg-M7K" secondAttribute="trailingMargin" id="D2P-dt-Faj"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="U1O-mC-Jmp" secondAttribute="bottom" id="TEP-ac-jGV"/>
                                         <constraint firstItem="xjF-Ps-uig" firstAttribute="leading" secondItem="Lim-Zg-M7K" secondAttribute="leadingMargin" id="XY7-XW-PTi"/>
                                         <constraint firstItem="U1O-mC-Jmp" firstAttribute="top" secondItem="qvc-ix-u1y" secondAttribute="bottom" constant="8" id="dwE-q9-DwZ"/>
                                         <constraint firstItem="qvc-ix-u1y" firstAttribute="trailing" secondItem="Lim-Zg-M7K" secondAttribute="trailingMargin" id="fmm-fG-DFc"/>
@@ -673,6 +677,11 @@
                                         <constraint firstItem="U1O-mC-Jmp" firstAttribute="trailing" secondItem="Lim-Zg-M7K" secondAttribute="trailingMargin" id="rEv-nn-etk"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblLFContact" destination="U1O-mC-Jmp" id="xuU-h2-Xq0"/>
+                                    <outlet property="lblLFDate" destination="qvc-ix-u1y" id="OQ1-y5-p3K"/>
+                                    <outlet property="lblLFItemName" destination="xjF-Ps-uig" id="jiT-sv-ENm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -684,7 +693,7 @@
                         <barButtonItem key="rightBarButtonItem" title="My Items" id="HWN-o9-nM6"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="KNf-dL-rEu" kind="show" id="nPu-FT-5LJ"/>
+                        <segue destination="KNf-dL-rEu" kind="show" identifier="segueLF" id="nPu-FT-5LJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjT-OW-cMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
