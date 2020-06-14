@@ -11,6 +11,7 @@ import UIKit
 var LFItems = [LFItem]()
 
 var myUserID = "rwistar@hotchkiss.org"
+var myUserName = "Roger Wistar"
 
 class LFTableCell : UITableViewCell {
     @IBOutlet weak var lblLFItemName: UILabel!
@@ -44,6 +45,12 @@ class LFTableViewController: UITableViewController {
         let date3 = formatter.date(from: "2020/04/01 9:30")
         LFItems.append(LFItem(LFid: 3, LFisFound: false, LFdate: date3!, LFemail: "bwistar26@hotchkiss.org", LFcontact: "Benjamin Wistar", LFitemName: "Golf clubs", LFitemDesc: "I left my golf clubs out in the front yard and now they're gone. Please help me find them!"))
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source

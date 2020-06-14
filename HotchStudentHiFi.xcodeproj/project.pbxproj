@@ -26,6 +26,7 @@
 		8FA121C424952DC000784564 /* LFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA121C324952DC000784564 /* LFItem.swift */; };
 		8FA97BC824956A460013510B /* LFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA97BC724956A460013510B /* LFTableViewController.swift */; };
 		8FA97BCA24956A690013510B /* LFDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA97BC924956A690013510B /* LFDetailViewController.swift */; };
+		8FA97BF02496AB0900A54E73 /* LFMyItemsAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA97BEF2496AB0900A54E73 /* LFMyItemsAddTableViewController.swift */; };
 		8FC9C47624883CD90074D8AE /* SocialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9C47524883CD80074D8AE /* SocialTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		8FA121C324952DC000784564 /* LFItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFItem.swift; sourceTree = "<group>"; };
 		8FA97BC724956A460013510B /* LFTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFTableViewController.swift; sourceTree = "<group>"; };
 		8FA97BC924956A690013510B /* LFDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFDetailViewController.swift; sourceTree = "<group>"; };
+		8FA97BEF2496AB0900A54E73 /* LFMyItemsAddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMyItemsAddTableViewController.swift; sourceTree = "<group>"; };
 		8FC9C47524883CD80074D8AE /* SocialTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				8FA97BC724956A460013510B /* LFTableViewController.swift */,
 				8FA97BC924956A690013510B /* LFDetailViewController.swift */,
 				8F98D08024966B7600E15912 /* LFMyItemsTableViewController.swift */,
+				8FA97BEF2496AB0900A54E73 /* LFMyItemsAddTableViewController.swift */,
 				8F35135F24859DB5004636E9 /* EventsTableViewController.swift */,
 				8F8FE28D24867E7C00DA3A71 /* EventDetailViewController.swift */,
 				8F110890248A8CCB007F10EE /* EventFilterTableViewController.swift */,
@@ -310,6 +313,7 @@
 				8F3517B72482D23F00C366AB /* SocialViewController.swift in Sources */,
 				8FA121C424952DC000784564 /* LFItem.swift in Sources */,
 				8FC9C47624883CD90074D8AE /* SocialTableViewController.swift in Sources */,
+				8FA97BF02496AB0900A54E73 /* LFMyItemsAddTableViewController.swift in Sources */,
 				8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */,
 				8F8FE28E24867E7C00DA3A71 /* EventDetailViewController.swift in Sources */,
 				8F98D08124966B7600E15912 /* LFMyItemsTableViewController.swift in Sources */,

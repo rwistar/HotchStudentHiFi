@@ -1,18 +1,19 @@
 //
-//  LFMyItemsTableViewController.swift
+//  LFMyItemsAddTableViewController.swift
 //  HotchStudentHiFi
 //
-//  Created by Roger P Wistar on 6/14/20.
+//  Created by Roger Wistar on 6/14/20.
 //  Copyright © 2020 Roger P Wistar. All rights reserved.
 //
 
 import UIKit
 
-class LFMyItemsTableViewController: UITableViewController {
+class LFMyItemsAddTableViewController: UITableViewController {
     
-    var selectedItem : LFItem?
+    @IBOutlet weak var txtItemName: UITextField!
+    @IBOutlet weak var txtUserName: UITextField!
+    @IBOutlet weak var tvItemDesc: UITextView!
     
-    var myItems = [LFItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,59 +23,29 @@ class LFMyItemsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        getMyItems()
-        tableView.reloadData()
-    }
-    
-    func getMyItems() {
-        myItems = [LFItem]()
-        
-        for item in LFItems {
-            if myUserID == item.LFemail {
-                myItems.append(item)
-            }
-        }
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        getMyItems()
-        tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return myItems.count
-    }
-
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellLF", for: indexPath) as! LFTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        let idx = indexPath.row
-        let item = myItems[idx]
-        
-        let itemNameStr = "#\(item.LFid): \(item.LFitemName)"
-        cell.lblLFItemName.text = itemNameStr
-        
-        cell.lblLFDate.text = item.formattedDate
-        
-        cell.lblLFContact.text = item.LFcontact
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -84,34 +55,17 @@ class LFMyItemsTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            //tableView.deleteRows(at: [indexPath], with: .fade)
-            let cell = tableView.cellForRow(at: indexPath) as! LFTableCell
-            let itemName = cell.lblLFItemName.text!
-            let idIdx = itemName.firstIndex(of: ":")!
-            let start = itemName.index(itemName.startIndex, offsetBy: 1)
-            let itemNum = Int(itemName[start..<idIdx])
-
-            var itemIdx = 0
-            for idx in 0..<LFItems.count {
-                if LFItems[idx].LFid == itemNum {
-                    itemIdx = idx
-                }
-            }
-            LFItems.remove(at: itemIdx)
-            
-            getMyItems()
-            tableView.reloadData()
-
+            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
@@ -137,5 +91,39 @@ class LFMyItemsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func btnSavePressed(_ sender: UIBarButtonItem) {
+        if txtItemName.text == ""
+            || txtUserName.text == ""
+            || tvItemDesc.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Please complete all entry fields", preferredStyle: .alert)
+            
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            let id = getNextID()
+            
+            let newItem = LFItem(LFid: id, LFisFound: false, LFdate: Date(), LFemail: myUserID, LFcontact: txtUserName.text!, LFitemName: txtItemName.text!, LFitemDesc: tvItemDesc.text!)
+            
+            LFItems.append(newItem)
+            
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+    }
+    
+    func getNextID() -> Int
+    {
+        var nextID = 1
+        
+        for item in LFItems {
+            if item.LFid >= nextID {
+                nextID = item.LFid + 1
+            }
+            
+        }
+        return nextID
+        
+    }
+    
 
 }
