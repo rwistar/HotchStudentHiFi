@@ -98,6 +98,14 @@ class LFMyItemsAddTableViewController: UITableViewController {
             || tvItemDesc.text == "" {
             let alert = UIAlertController(title: "Error", message: "Please complete all entry fields", preferredStyle: .alert)
             
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                
+               //validation logic goes here
+            }
+            
+            //add button to alert
+            alert.addAction(OKAction)
+            
             self.present(alert, animated: true, completion: nil)
         } else {
             let id = getNextID()

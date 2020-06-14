@@ -108,6 +108,44 @@ class LFTableViewController: UITableViewController {
         }    
     }
     */
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+
+        let foundIt = UITableViewRowAction(style: .normal, title: "Found it!") { (action, indexPath) in
+            print("Found it!")
+            let cell = tableView.cellForRow(at: indexPath) as! LFTableCell
+            let itemName = cell.lblLFItemName.text!
+            let idIdx = itemName.firstIndex(of: ":")!
+            let start = itemName.index(itemName.startIndex, offsetBy: 1)
+            let itemNum = Int(itemName[start..<idIdx])
+
+            var itemIdx = 0
+            for idx in 0..<LFItems.count {
+                if LFItems[idx].LFid == itemNum {
+                    itemIdx = idx
+                }
+            }
+            
+            let item = LFItems[itemIdx]
+            let ownerEmail = item.LFemail
+            
+            let foundMesssage = "\(ownerEmail) has been contacted to set up an item return"
+            let alert = UIAlertController(title: "Good work!", message: foundMesssage, preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                
+               //validation logic goes here
+            }
+            
+            //add button to alert
+            alert.addAction(OKAction)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        foundIt.backgroundColor = UIColor.blue
+
+        return [foundIt]
+    }
 
     /*
     // Override to support rearranging the table view.
