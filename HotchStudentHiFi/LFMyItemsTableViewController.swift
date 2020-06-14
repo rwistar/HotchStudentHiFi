@@ -1,28 +1,19 @@
 //
-//  LFTableViewController.swift
+//  LFMyItemsTableViewController.swift
 //  HotchStudentHiFi
 //
-//  Created by Roger Wistar on 6/13/20.
+//  Created by Roger P Wistar on 6/14/20.
 //  Copyright © 2020 Roger P Wistar. All rights reserved.
 //
 
 import UIKit
 
-var LFItems = [LFItem]()
-
-var myUserID = "rwistar@hotchkiss.org"
-
-class LFTableCell : UITableViewCell {
-    @IBOutlet weak var lblLFItemName: UILabel!
-    @IBOutlet weak var lblLFDate: UILabel!
-    @IBOutlet weak var lblLFContact: UILabel!
+class LFMyItemsTableViewController: UITableViewController {
     
-}
-
-class LFTableViewController: UITableViewController {
-
     var selectedItem : LFItem?
     
+    var myItems = [LFItem]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,18 +23,19 @@ class LFTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        getMyItems()
+        tableView.reloadData()
+    }
+    
+    func getMyItems() {
+        myItems = [LFItem]()
         
-        let date1 = formatter.date(from: "2020/04/02 12:15")
-        LFItems.append(LFItem(LFid: 1, LFisFound: false, LFdate: date1!, LFemail: "rwistar@hotchkiss.org", LFcontact: "Roger Wistar", LFitemName: "RFTG game", LFitemDesc: "I've lost my copy of Race for The Galaxy. Please help me find it!"))
-
-        let date2 = formatter.date(from: "2020/04/02 13:30")
-        LFItems.append(LFItem(LFid: 2, LFisFound: false, LFdate: date2!, LFemail: "mwistar@hotchkiss.org", LFcontact: "Marcie Wistar", LFitemName: "Nintendo Switch", LFitemDesc: "We can't find the Nintendo Switch that was in the activities closet. Any idea where it is now?"))
-
-        let date3 = formatter.date(from: "2020/04/01 9:30")
-        LFItems.append(LFItem(LFid: 3, LFisFound: false, LFdate: date3!, LFemail: "bwistar26@hotchkiss.org", LFcontact: "Benjamin Wistar", LFitemName: "Golf clubs", LFitemDesc: "I left my golf clubs out in the front yard and now they're gone. Please help me find them!"))
-
+        for item in LFItems {
+            if myUserID == item.LFemail {
+                myItems.append(item)
+            }
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -55,7 +47,7 @@ class LFTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return LFItems.count
+        return myItems.count
     }
 
     
@@ -64,7 +56,7 @@ class LFTableViewController: UITableViewController {
 
         // Configure the cell...
         let idx = indexPath.row
-        let item = LFItems[idx]
+        let item = myItems[idx]
         
         let itemNameStr = "#\(item.LFid): \(item.LFitemName)"
         cell.lblLFItemName.text = itemNameStr
@@ -76,11 +68,6 @@ class LFTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedItem = LFItems[indexPath.row]
-        performSegue(withIdentifier: "segueLF", sender: self)
-    }
-    
 
     /*
     // Override to support conditional editing of the table view.
@@ -90,17 +77,34 @@ class LFTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+            let cell = tableView.cellForRow(at: indexPath) as! LFTableCell
+            let itemName = cell.lblLFItemName.text!
+            let idIdx = itemName.firstIndex(of: ":")!
+            let start = itemName.index(itemName.startIndex, offsetBy: 1)
+            let itemNum = Int(itemName[start..<idIdx])
+
+            var itemIdx = 0
+            for idx in 0..<LFItems.count {
+                if LFItems[idx].LFid == itemNum {
+                    itemIdx = idx
+                }
+            }
+            LFItems.remove(at: itemIdx)
+            
+            getMyItems()
+            tableView.reloadData()
+
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -117,20 +121,14 @@ class LFTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "segueLF" {
-            if let destination = segue.destination as? LFDetailViewController {
-                destination.item = selectedItem
-            }
-        }
     }
-    
+    */
 
 }

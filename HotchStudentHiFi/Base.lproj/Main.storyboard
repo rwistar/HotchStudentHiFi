@@ -690,7 +690,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lost &amp; Found" id="awG-TF-J4B">
-                        <barButtonItem key="rightBarButtonItem" title="My Items" id="HWN-o9-nM6"/>
+                        <barButtonItem key="rightBarButtonItem" title="My Items" id="HWN-o9-nM6">
+                            <connections>
+                                <segue destination="J68-ic-bvK" kind="show" id="QpF-U9-5Vm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="KNf-dL-rEu" kind="show" identifier="segueLF" id="nPu-FT-5LJ"/>
@@ -699,6 +703,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjT-OW-cMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1653.6231884057972" y="2558.7053571428569"/>
+        </scene>
+        <!--L&F My Items Table-->
+        <scene sceneID="Ud7-Zy-hkO">
+            <objects>
+                <tableViewController title="L&amp;F My Items Table" id="J68-ic-bvK" customClass="LFMyItemsTableViewController" customModule="HotchStudentHiFi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CcC-20-R0f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellLF" rowHeight="138" id="pcJ-FG-kOl" customClass="LFTableCell" customModule="HotchStudentHiFi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="138"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pcJ-FG-kOl" id="bPq-4U-S48">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L&amp;F Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kya-9R-S0G">
+                                            <rect key="frame" x="20" y="11" width="374" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="YeY-Ki-dAQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L&amp;F Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czn-eG-IFk">
+                                            <rect key="frame" x="20" y="49" width="374" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="Vyq-nb-R5c"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L&amp;F Contact" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epW-rt-sGb">
+                                            <rect key="frame" x="20" y="77" width="374" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="epW-rt-sGb" firstAttribute="trailing" secondItem="bPq-4U-S48" secondAttribute="trailingMargin" id="7pS-Xi-lb4"/>
+                                        <constraint firstItem="Kya-9R-S0G" firstAttribute="trailing" secondItem="bPq-4U-S48" secondAttribute="trailingMargin" id="Aqu-QJ-PnH"/>
+                                        <constraint firstItem="Kya-9R-S0G" firstAttribute="leading" secondItem="bPq-4U-S48" secondAttribute="leadingMargin" id="ESb-6f-jom"/>
+                                        <constraint firstItem="epW-rt-sGb" firstAttribute="leading" secondItem="bPq-4U-S48" secondAttribute="leadingMargin" id="FGw-cD-P95"/>
+                                        <constraint firstItem="Kya-9R-S0G" firstAttribute="top" secondItem="bPq-4U-S48" secondAttribute="topMargin" id="Hax-Tz-EhG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="epW-rt-sGb" secondAttribute="bottom" id="Tj8-oE-DmP"/>
+                                        <constraint firstItem="Czn-eG-IFk" firstAttribute="leading" secondItem="bPq-4U-S48" secondAttribute="leadingMargin" id="W2o-wo-oHV"/>
+                                        <constraint firstItem="Czn-eG-IFk" firstAttribute="top" secondItem="Kya-9R-S0G" secondAttribute="bottom" constant="8" id="h88-Nc-BRc"/>
+                                        <constraint firstItem="epW-rt-sGb" firstAttribute="top" secondItem="Czn-eG-IFk" secondAttribute="bottom" constant="8" id="m8i-R9-U73"/>
+                                        <constraint firstItem="Czn-eG-IFk" firstAttribute="trailing" secondItem="bPq-4U-S48" secondAttribute="trailingMargin" id="nGb-pc-Rn7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblLFContact" destination="epW-rt-sGb" id="V82-UR-yWk"/>
+                                    <outlet property="lblLFDate" destination="Czn-eG-IFk" id="xFp-3c-IPd"/>
+                                    <outlet property="lblLFItemName" destination="Kya-9R-S0G" id="l1O-wg-PIB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="J68-ic-bvK" id="k4O-2V-DyV"/>
+                            <outlet property="delegate" destination="J68-ic-bvK" id="U83-cT-icp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Items" id="XQx-0X-Xey">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rQ7-K4-lSd"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYR-Ij-38v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535" y="3303"/>
         </scene>
     </scenes>
     <resources>
