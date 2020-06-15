@@ -48,6 +48,14 @@ class EventsTableViewController: UITableViewController {
         events.append(Event(title: "BaHSA", desc: "We'll be discussing the effects of COVID-19 on food, education, healthcare systems and more for people of different demographics mainly within the United States.", date: date2!, loc: "Zoom", org: "BaHSA", contact: "BaHSA Board"))
         filters["BaHSA"] = true
         
+        UNUserNotificationCenter
+            .current()
+            .requestAuthorization(options: [.alert, .badge, .alert]) { granted, error in
+                if granted == true && error == nil {
+                    // We have permission!
+                }
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

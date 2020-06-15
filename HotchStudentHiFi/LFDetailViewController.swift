@@ -34,6 +34,26 @@ class LFDetailViewController: UITableViewController {
             txtItemDesc.text = item.LFitemDesc
         }
     }
+    
+    @IBAction func btnItemAlert(_ sender: UIBarButtonItem) {
+        if let item = self.item {
+            let content = UNMutableNotificationContent()
+            content.title = "New Lost Item!"
+            content.body = "\(item.LFitemName)"
+            content.sound = UNNotificationSound.default
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request) { error in
+                guard error == nil else { return }
+                print("Scheduling notification.")
+            }
+
+        }
+    }
+    
 
     // MARK: - Table view data source
 

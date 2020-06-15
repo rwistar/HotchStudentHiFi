@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class EventDetailViewController: UITableViewController {
 
@@ -38,6 +39,28 @@ class EventDetailViewController: UITableViewController {
             
         }
     }
+    
+    @IBAction func btnAlarmPressed(_ sender: UIBarButtonItem) {
+        
+        if let event = self.event {
+            let content = UNMutableNotificationContent()
+            content.title = "Event reminder"
+            content.body = "\(event.formattedTime): \(event.title)"
+            content.sound = UNNotificationSound.default
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request) { error in
+                guard error == nil else { return }
+                print("Scheduling notification.")
+            }
+
+        }
+        
+    }
+    
 
     // MARK: - Table view data source
 

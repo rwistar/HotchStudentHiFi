@@ -21,4 +21,10 @@ struct Event {
         dateFormatter.dateFormat = "MMM d, YYYY -- h:mm a"
         return dateFormatter.string(from: date)
     }
+    
+    var formattedTime : String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm"
+        return dateFormatter.string(from: date)
+    }
 }

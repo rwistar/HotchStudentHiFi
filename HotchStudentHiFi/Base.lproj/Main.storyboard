@@ -141,7 +141,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGx-IE-s8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+            <point key="canvasLocation" x="748" y="-490"/>
         </scene>
         <!--Event Table-->
         <scene sceneID="UHf-lc-kD2">
@@ -210,6 +210,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Events" id="DvI-Mb-GMl">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" image="gear" catalog="system" id="c0t-PY-Us8">
+                            <connections>
+                                <segue destination="NYS-Wu-mUa" kind="show" id="5Oe-Xo-JcT"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="rrK-Ax-97s">
                             <connections>
                                 <segue destination="L3w-9H-Eqy" kind="show" id="f8U-JM-i20"/>
@@ -222,7 +227,23 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ6-fR-qxm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="-320"/>
+            <point key="canvasLocation" x="1572" y="-490"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="YZP-Fz-zPO">
+            <objects>
+                <viewController id="NYS-Wu-mUa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dIa-pU-kYp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="z6V-ZT-obH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="heX-Tj-Cwc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DdR-BE-h3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2429" y="-1228"/>
         </scene>
         <!--Event Filter-->
         <scene sceneID="0e0-6h-eLo">
@@ -260,7 +281,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wd9-kV-Ied" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429" y="-1063"/>
+            <point key="canvasLocation" x="2428" y="-490"/>
         </scene>
         <!--Event Detail-->
         <scene sceneID="z5X-23-3xs">
@@ -389,7 +410,13 @@
                             <outlet property="delegate" destination="2Iu-8K-CxB" id="eiv-kK-ybD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="oy2-Xu-PdD"/>
+                    <navigationItem key="navigationItem" id="oy2-Xu-PdD">
+                        <barButtonItem key="rightBarButtonItem" title="Alarm" id="Bm2-eR-WzA">
+                            <connections>
+                                <action selector="btnAlarmPressed:" destination="2Iu-8K-CxB" id="FlI-pn-WE9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblDate" destination="eLx-vx-1cB" id="Mrz-7B-eZ7"/>
                         <outlet property="lblHost" destination="7Z1-6h-pqZ" id="bRW-uI-5LR"/>
@@ -400,7 +427,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZN-FF-d6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429" y="-320"/>
+            <point key="canvasLocation" x="2429" y="360"/>
         </scene>
         <!--Social Nav-->
         <scene sceneID="fQs-8r-5z6">
@@ -618,7 +645,13 @@
                             <outlet property="delegate" destination="KNf-dL-rEu" id="hZB-mo-MqL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="guF-MY-bFu"/>
+                    <navigationItem key="navigationItem" id="guF-MY-bFu">
+                        <barButtonItem key="rightBarButtonItem" title="Item Alert" id="yK2-xy-M4m">
+                            <connections>
+                                <action selector="btnItemAlert:" destination="KNf-dL-rEu" id="6bk-7U-4ro"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblItemContact" destination="mgL-wg-k9L" id="hFt-vC-Geh"/>
                         <outlet property="lblItemDate" destination="N9L-1Y-jUN" id="f1W-EM-BIn"/>
@@ -905,6 +938,7 @@
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
         <image name="questionmark.square" catalog="system" width="128" height="114"/>
     </resources>
