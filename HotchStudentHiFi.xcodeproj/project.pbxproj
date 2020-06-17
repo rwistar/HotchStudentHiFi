@@ -21,6 +21,7 @@
 		8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B22482CDE400C366AB /* MenuViewController.swift */; };
 		8F3517B52482CEDA00C366AB /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B42482CEDA00C366AB /* CoursesViewController.swift */; };
 		8F3517B72482D23F00C366AB /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3517B62482D23F00C366AB /* SocialViewController.swift */; };
+		8F777C8C249A644600C7200C /* DASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F777C8B249A644600C7200C /* DASViewController.swift */; };
 		8F8FE28E24867E7C00DA3A71 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8FE28D24867E7C00DA3A71 /* EventDetailViewController.swift */; };
 		8F98D08124966B7600E15912 /* LFMyItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F98D08024966B7600E15912 /* LFMyItemsTableViewController.swift */; };
 		8FA121C424952DC000784564 /* LFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA121C324952DC000784564 /* LFItem.swift */; };
@@ -68,6 +69,7 @@
 		8F3517B22482CDE400C366AB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8F3517B42482CEDA00C366AB /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		8F3517B62482D23F00C366AB /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		8F777C8B249A644600C7200C /* DASViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DASViewController.swift; sourceTree = "<group>"; };
 		8F8FE28D24867E7C00DA3A71 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		8F98D08024966B7600E15912 /* LFMyItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMyItemsTableViewController.swift; sourceTree = "<group>"; };
 		8FA121C324952DC000784564 /* LFItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFItem.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				8F35177E2482CC7600C366AB /* AppDelegate.swift */,
 				8F3517802482CC7600C366AB /* SceneDelegate.swift */,
 				8F3517862482CC7600C366AB /* Main.storyboard */,
+				8F777C8B249A644600C7200C /* DASViewController.swift */,
 				8F3517892482CC7A00C366AB /* Assets.xcassets */,
 				8F35178B2482CC7A00C366AB /* LaunchScreen.storyboard */,
 				8F35178E2482CC7A00C366AB /* Info.plist */,
@@ -316,6 +319,7 @@
 				8FA97BF02496AB0900A54E73 /* LFMyItemsAddTableViewController.swift in Sources */,
 				8F3517B32482CDE400C366AB /* MenuViewController.swift in Sources */,
 				8F8FE28E24867E7C00DA3A71 /* EventDetailViewController.swift in Sources */,
+				8F777C8C249A644600C7200C /* DASViewController.swift in Sources */,
 				8F98D08124966B7600E15912 /* LFMyItemsTableViewController.swift in Sources */,
 				8F35135E24859894004636E9 /* Event.swift in Sources */,
 				8F110891248A8CCC007F10EE /* EventFilterTableViewController.swift in Sources */,
